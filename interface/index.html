@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="style.css">
+<link rel="import" href="assets/">
+<link rel="import" href="logic/">
 
 <body>
   <div id="heading">
@@ -6,240 +8,215 @@
   </div>
  <div id="interface">
   <div id="teamInterface">
-    <div class="team">
-      <h2>Team Member 1</h2>
-      <img src="champion.jpg" id="champion">
-    </div>
-    <div class="team">
-      <h2>Team Member 2</h2>
-      <img src="champion.jpg" id="champion">
-    </div>  
-    <div class="team">
-      <h2>Team Member 3</h2>
-      <img src="champion.jpg" id="champion">
-    </div>
-    <div class="team">
-      <h2>Team Member 4</h2>
-      <img src="champion.jpg" id="champion">
-    </div>
-    <div class="team">
-      <h2>Team Member 5</h2>
-      <img src="champion.jpg" id="champion">
-    </div> 
-    <div class="team">
-      <h2>Team Member 6</h2>
-      <img src="champion.jpg" id="champion">
-    </div>
-    <div class="team">
-      <h2>Team Member 7</h2>
-      <img src="champion.jpg" id="champion">
-    </div>
-    <div class="team">
-      <h2>Team Member 8</h2>
-      <img src="champion.jpg" id="champion">
-    </div> 
-    <div class="team">
-      <h2>Team Member 9</h2>
-      <img src="champion.jpg" id="champion">
+    <div id="teamEnd">
     </div>
   </div>
   <div id="championDisplay">
     <div id="champion">
       <h2>Aatrox</h2>
-      <img src="championSource.jpg" id="championSource">
+      <button onClick="teamEdit()">
+        <img src="/assets/aatrox.png" id="championSource">
+      </button>
     </div>
     <div id="champion">
       <h2>Ahri</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/ahri.png" onClick="team.push('Ahri')" id="championSource">
     </div>
     <div id="champion">
       <h2>Akali</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/akali.png" onClick="team.push('Akali')" id="championSource">
     </div>
     <div id="champion">
       <h2>Anivia</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/anivia.png" onClick="team.push('Anivia')" id="championSource">
     </div> 
     <div id="champion">
       <h2>Ashe</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/ashe.png" onClick="team.push('Ashe')" id="championSource">
     </div>  
     <div id="champion">
       <h2>Aurelion Sol</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/aurelion-sol.png" onClick="team.push('Aurelion')" id="championSource">
     </div>
     <div id="champion">
       <h2>Blitzcrank</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/blitzcrank.png" onClick="team.push('Blitzcrank')" id="championSource">
     </div>
     <div id="champion">
       <h2>Brand</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/brand.png" onClick="team.push('Brand')" id="championSource">
     </div>
     <div id="champion">
       <h2>Braum</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/braum.png" onClick="team.push('Braum')" id="championSource">
     </div>
     <div id="champion">
       <h2>Cho'Gath</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/chogath.png" onClick="team.push('ChoGath')" id="championSource">
     </div>
     <div id="champion">
       <h2>Darius</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/darius.png" onClick="team.push('Darius')" id="championSource">
     </div> 
     <div id="champion">
       <h2>Draven</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/draven.png" onClick="team.push('Draven')" id="championSource">
     </div>  
     <div id="champion">
       <h2>Elise</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/elise.png" onClick="team.push('Elise')" id="championSource">
     </div>
     <div id="champion">
       <h2>Evelynn</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/evelynn.png" onClick="team.push('Evelynn')" id="championSource">
     </div>
     <div id="champion">
       <h2>Fiora</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/fiora.png" onClick="team.push('Fiora')" id="championSource">
     </div>
     <div id="champion">
       <h2>Gangplank</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/gangplank.png" onClick="team.push('Gangplank')" id="championSource">
     </div>
     <div id="champion">
       <h2>Garen</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/garen.png" onClick="team.push('Garen')" id="championSource">
     </div>
     <div id="champion">
       <h2>Karthus</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/karthus.png" onClick="team.push('Karthus')" id="championSource">
     </div> 
     <div id="champion">
       <h2>Kassadin</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/kassadin.png" onClick="team.push('Kassadin')" id="championSource">
     </div>  
     <div id="champion">
       <h2>Katarina</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/katarina.png" onClick="team.push('Katarina')" id="championSource">
     </div>
     <div id="champion">
       <h2>Kayle</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/kayle.png" onClick="team.push('Kayle')" id="championSource">
     </div>
     <div id="champion">
       <h2>Kennen</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/kennen.png" onClick="team.push('Kennen')" id="championSource">
     </div>
     <div id="champion">
       <h2>Kha'zix</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/khazix.png" onClick="team.push('KhaZix')" id="championSource">
     </div>
     <div id="champion">
       <h2>Kindred</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/kindred.png" onClick="team.push('Kindred')" id="championSource">
     </div>
     <div id="champion">
       <h2>Leona</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/leona.png" onClick="team.push('Leona')" id="championSource">
     </div> 
     <div id="champion">
       <h2>Lissandra</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/lissandra.png" onClick="team.push('Lissandra')" id="championSource">
     </div>  
     <div id="champion">
       <h2>Lucian</h2>
-      <img src="championSource.jpg" id="championSource">
+      <img src="/assets/lucian.png" onClick="team.push('Lucian')" id="championSource">
     </div>
-        <div id="champion">
-          <h2>Lulu</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-        <div id="champion">
-          <h2>Miss Fortune</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-        <div id="champion">
-          <h2>Mordekaiser</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-        <div id="champion">
-          <h2>Morgana</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-        <div id="champion">
-          <h2>Nidalee</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div> 
-        <div id="champion">
-          <h2>Poppy</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>  
-          <div id="champion">
-          <h2>Pyke</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-        <div id="champion">
-          <h2>Rek'Sai</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-        <div id="champion">
-          <h2>Rengar</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-        <div id="champion">
-          <h2>Sejuani</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-        <div id="champion">
-          <h2>Shen</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-        <div id="champion">
-          <h2>Shyvana</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div> 
-        <div id="champion">
-          <h2>Swain</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>  
-        <div id="champion">
-          <h2>Tristana</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-        <div id="champion">
-          <h2>Twisted Fate</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-        <div id="champion">
-          <h2>Varus</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-        <div id="champion">
-          <h2>Vayne</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-        <div id="champion">
-          <h2>Veigar</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-        <div id="champion">
-          <h2>Volibear</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div> 
-        <div id="champion">
-          <h2>Warwick</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>  
-        <div id="champion">
-          <h2>Yasuo</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-        <div id="champion">
-          <h2>Zed</h2>
-          <img src="championSource.jpg" id="championSource">
-        </div>
-     </div> 
-   </div>    
+    <div id="champion">
+      <h2>Lulu</h2>
+      <img src="/assets/lulu.png" onClick="team.push('Lulu')" id="championSource">
+    </div>
+    <div id="champion">
+      <h2>Miss Fortune</h2>
+      <img src="/assets/miss-fortune.png" onClick="team.push('MissFortune')" id="championSource">
+    </div>
+    <div id="champion">
+      <h2>Mordekaiser</h2>
+      <img src="/assets/mordekaiser.png" onClick="team.push('Mordekaiser')" id="championSource">
+    </div>
+    <div id="champion">
+      <h2>Morgana</h2>
+      <img src="/assets/morgana.png" onClick="team.push('Morgana')" id="championSource">
+    </div>
+    <div id="champion">
+      <h2>Nidalee</h2>
+      <img src="/assets/nidalee.png" onClick="team.push('Nidalee')" id="championSource">
+    </div> 
+    <div id="champion">
+      <h2>Pantheon</h2>
+      <img src="/assets/pantheon.png" onClick="team.push('Pantheon')" id="championSource">
+    </div>  
+    <div id="champion">
+      <h2>Pyke</h2>
+      <img src="/assets/pyke.png" onClick="team.push('Pyke')" id="championSource">
+    </div>
+    <div id="champion">
+      <h2>Rek'Sai</h2>
+      <img src="/assets/reksai.png" onClick="team.push('RekSai')" id="championSource">
+    </div>
+    <div id="champion">
+      <h2>Rengar</h2>
+      <img src="/assets/rengar.png" onClick="team.push('Rengar')" id="championSource">
+    </div>
+    <div id="champion">
+      <h2>Sejuani</h2>
+      <img src="/assets/sejuani.png" onClick="team.push('Sejuani')" id="championSource">
+    </div>
+    <div id="champion">
+      <h2>Shen</h2>
+      <img src="/assets/shen.png" onClick="team.push('Shen')" id="championSource">
+    </div>
+    <div id="champion">
+      <h2>Shyvana</h2>
+      <img src="/assets/shyvana.png" onClick="team.push('Shyvana')" id="championSource">
+    </div> 
+    <div id="champion">
+      <h2>Swain</h2>
+      <img src="/assets/swain.png" onClick="team.push('Swain')" id="championSource">
+    </div>  
+    <div id="champion">
+      <h2>Tristana</h2>
+      <img src="/assets/tristana.png" onClick="team.push('Tristana')" id="championSource">
+    </div>
+    <div id="champion">
+      <h2>Twisted Fate</h2>
+      <img src="/assets/twisted-fate.png" onClick="team.push('TwistedFate')" id="championSource">
+    </div>
+    <div id="champion">
+      <h2>Varus</h2>
+      <img src="/assets/varus.png" onClick="team.push('Varus')" id="championSource">
+    </div>
+    <div id="champion">
+      <h2>Vayne</h2>
+      <img src="/assets/vayne.png" onClick="team.push('Vayne')" id="championSource">
+    </div>
+    <div id="champion">
+      <h2>Veigar</h2>
+      <img src="/assets/veigar.png" onClick="team.push('Veigar')" id="championSource">
+    </div>
+    <div id="champion">
+      <h2>Volibear</h2>
+      <img src="/assets/volibear.png" onClick="team.push('Volibear')" id="championSource">
+    </div> 
+    <div id="champion">
+      <h2>Warwick</h2>
+      <img src="/assets/warwick.png" onClick="team.push('Warwick')" id="championSource">
+    </div>  
+    <div id="champion">
+      <h2>Yasuo</h2>
+      <img src="/assets/yasuo.png" onClick="team.push('Yasuo')" id="championSource">
+    </div>
+    <div id="champion">
+      <h2>Zed</h2>
+      <img src="/assets/zed.png" onClick="team.push('Zed')" id="championSource">
+    </div>
+  </div> 
+</div>    
 </body>
+
+
+
+<div id="team">
+  <h2 id="team2">Team Member 2</h2>
+  <img id="team2Image" src="champion.jpg" id="champion2">
+</div>
