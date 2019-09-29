@@ -1,4 +1,4 @@
-championList = [
+var championList = [
 
 Camile = {
     origin: 'Hextech',
@@ -17,7 +17,7 @@ Elise = {
     class: 'Shapeshifter',
     image: "elise.png"
 },
-     
+
 Fiora = {
     origin: 'Noble',
     class: 'Blademaster',
