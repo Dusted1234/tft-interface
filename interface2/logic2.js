@@ -1,6 +1,4 @@
 var team = [];
-var origins = [];
-var classes = [];
 
 function createList() {
     /// creates the champion list on the right side of the interface
@@ -9,7 +7,7 @@ function createList() {
       html += `
   <div class="champion" id="${champion.name}">
     <h2>${champion.name}</h2>
-    <button onclick="team.push(${champion.name}), createTeam(), addList(), synergyCheck()">
+    <button onclick="team.push(${champion.name}), createTeam(), synergyCheck()">
     <img class="championSource" src="/assets/${champion.image}">
     </button>
     </div>
@@ -43,46 +41,75 @@ function createTeam() {
 
 function synergyCheck () {
   /// checks for commonalities and applies css classes accodingly
+  for (var champion of championList) {
+    if (team.length === 0) {
+      divname = document.getElementById(champion.name);
+      divname.classList.remove("origin");
+      divname.classList.remove("class");
+      divname.classList.remove("both");
+    }
+    champion.classChecker = [];
+    champion.originChecker = [];
+    champion.bothChecker = []; 
+  }
+  for (var champion of championList) {
+    for (var member of team) { 
+      if (member.origin === champion.origin) {
+        champion.originChecker.push(1);
+      }
+      else if (member.origin.includes(champion.origin) == true) {
+        champion.originChecker.push(1);
+      }
+      console.log([champion.name, champion.originChecker]);
+      }
+    }
+  for (var champion of championList) {
+    divName = document.getElementById(champion.name); 
+    if (champion.originChecker.includes(1) == true) {
+      divName.classList.add("origin");
+      originCheck = true
+    }
+    else if (champion.originChecker.includes(1) == false) {
+      divName.classList.remove("origin");
+    }
+  }
+  for (var champion of championList) {
+    for (var member of team) { 
+      if (member.class === champion.class) {
+        champion.classChecker.push(1);
+      }
+      else if (member.class.includes(champion.class) == true) {
+        champion.classChecker.push(1);
+      }
+      console.log([champion.name, champion.classChecker]);
+      }
+    }
     for (var champion of championList) {
-     divName = document.getElementById(champion.name);
-     var originCheck = false;
-     var classCheck = false;
-     for (var member of team) { 
-     for (var i = 0; i < origins.length; i++) {
-      if (origins[i] === champion.origin) {
-        divName.classList.add("origin");
-        originCheck = true;
-      }
-    }
-     for (var i = 0; i < origins.length; i++) {
-      if (classes[i] === champion.class) {
+      divName = document.getElementById(champion.name); 
+      if (champion.classChecker.includes(1) == true) {
         divName.classList.add("class");
-        classCheck = true;
+      }
+      else if (champion.classChecker.includes(1) == false) {
+        divName.classList.remove("class");
       }
     }
-      if (originCheck == true && classCheck == true) {
-        divName.classList.remove("origin");
+    for (var champion of championList) {
+      divName = document.getElementById(champion.name); 
+      if (champion.classChecker.includes(1) == true && champion.originChecker.includes(1) == true) {
         divName.classList.remove("class");
+        divName.classList.remove("origin");
         divName.classList.add("both");
       }
-     }
+      else if (champion.classChecker.includes(1) == false || champion.originChecker.includes(1) == false) {
+        divName.classList.remove("both");
+      }
+   }
+    for (var champion of championList) {
+      divname = document.getElementById(champion.name);
+      for (var member of team) {
+        if(member.name === champion.name) {
+          divname.classList.remove("both");
+        }
+      }
     }
-  }
-
-function originList() {
-  for (var i = 0; i < team.length; i++) {
-    origins.push(team[i].origin);
-    console.log(origins);
-  } 
-}
-function classList() {
-  for (var i = 0; i < team.length; i++) {
-    classes.push(team[i].class);
-    console.log(classes);
-  }
-}
-
-function addList() {
-  classList();
-  originList();
 }
