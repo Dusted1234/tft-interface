@@ -1,66 +1,181 @@
-global.originList = [
-    demon = {
-        two: "Return 15 mana back to attacker",
-        four: "Return 30 mana back to attacker",
+var originList = [
+    Demon = {
+        name: "Demon",
+        2: "Return 15 mana back to attacker",
+        3: "Return 15 mana back to attacker",
+        4: "Return 30 mana back to attacker",
+        5: "Return 30 mana back to attacker",
+        6: "Return 30 mana back to attacker",
+        7: "Return 30 mana back to attacker",
+        8: "Return 30 mana back to attacker",
+        9: "Return 30 mana back to attacker",
+        value: 0,
     },
 
-    dragon = {
-        two: "Dragons are immune to 83% magic damage"
+    Dragon = {
+        name: "Dragon",
+        2: "Dragons are immune to 83% magic damage",
+        3: "Dragons are immune to 83% magic damage",
+        4: "Dragons are immune to 83% magic damage",
+        5: "Dragons are immune to 83% magic damage",
+        6: "Dragons are immune to 83% magic damage",
+        7: "Dragons are immune to 83% magic damage",
+        8: "Dragons are immune to 83% magic damage",
+        9: "Dragons are immune to 83% magic damage",
+        value: 0,
     },
 
-    exile = {
-        one: "If an Exile has no adjacent allies at the start of combat, they gain a shield equal to a 100% max health."
+    Exile = {
+        name: "Exile",
+        1: "If an Exile has no adjacent allies at the start of combat, they gain a shield equal to a 100% max health.",
+        2: "If an Exile has no adjacent allies at the start of combat, they gain a shield equal to a 100% max health.",
+        3: "If an Exile has no adjacent allies at the start of combat, they gain a shield equal to a 100% max health.",
+        4: "If an Exile has no adjacent allies at the start of combat, they gain a shield equal to a 100% max health.",
+        5: "If an Exile has no adjacent allies at the start of combat, they gain a shield equal to a 100% max health.",
+        6: "If an Exile has no adjacent allies at the start of combat, they gain a shield equal to a 100% max health.",
+        7: "If an Exile has no adjacent allies at the start of combat, they gain a shield equal to a 100% max health.",
+        8: "If an Exile has no adjacent allies at the start of combat, they gain a shield equal to a 100% max health.",
+        9: "If an Exile has no adjacent allies at the start of combat, they gain a shield equal to a 100% max health.",
+        value: 0,
     },
 
-    glacial = {
-        two: "On hit, Glacials have a 20% chance to stun for 2s.",
-        four: "On hit, Glacials have a 30% chance to stun for 2s.",
-        six: "On hit, Glacials have a 45% chance to stun for 2s.",
+    Glacial = {
+        name: "Glacial",
+        2: "On hit, Glacials have a 20% chance to stun for 2s.",
+        3: "On hit, Glacials have a 20% chance to stun for 2s.",
+        4: "On hit, Glacials have a 30% chance to stun for 2s.",
+        5: "On hit, Glacials have a 30% chance to stun for 2s.",
+        6: "On hit, Glacials have a 45% chance to stun for 2s.",
+        7: "On hit, Glacials have a 45% chance to stun for 2s.",
+        8: "On hit, Glacials have a 45% chance to stun for 2s.",
+        9: "On hit, Glacials have a 45% chance to stun for 2s.",
+        value: 0,
     },
 
-    hextech = {
-        two: "When combat begins, the ally team launches and detonates a pulse bomb, temporarily disabling nearby enemy items for 7 seconds within 1 hex",
-        four: "When combat begins, the ally team launches and detonates a pulse bomb, temporarily disabling nearby enemy items for 7 seconds within 2 hexes"
+    Hextech = {
+        name: "Hextech",
+        2: "When combat begins, the ally team launches and detonates a pulse bomb, temporarily disabling nearby enemy items for 7 seconds within 1 hex",
+        3: "When combat begins, the ally team launches and detonates a pulse bomb, temporarily disabling nearby enemy items for 7 seconds within 1 hex",
+        4: "When combat begins, the ally team launches and detonates a pulse bomb, temporarily disabling nearby enemy items for 7 seconds within 2 hexes",
+        5: "When combat begins, the ally team launches and detonates a pulse bomb, temporarily disabling nearby enemy items for 7 seconds within 2 hexes",
+        6: "When combat begins, the ally team launches and detonates a pulse bomb, temporarily disabling nearby enemy items for 7 seconds within 2 hexes",
+        7: "When combat begins, the ally team launches and detonates a pulse bomb, temporarily disabling nearby enemy items for 7 seconds within 2 hexes",
+        8: "When combat begins, the ally team launches and detonates a pulse bomb, temporarily disabling nearby enemy items for 7 seconds within 2 hexes",
+        9: "When combat begins, the ally team launches and detonates a pulse bomb, temporarily disabling nearby enemy items for 7 seconds within 2 hexes",
+        value: 0,
     },
 
-    imperial = {
-        two: "1 random Imperial deal Double Damage",
-        four: "All Imperials deal Double Damage"
+    Imperial = {
+        name: "Imperial",
+        2: "1 random Imperial deal Double Damage",
+        3: "1 random Imperial deal Double Damage",
+        4: "All Imperials deal Double Damage",
+        5: "All Imperials deal Double Damage",
+        6: "All Imperials deal Double Damage",
+        7: "All Imperials deal Double Damage",
+        8: "All Imperials deal Double Damage",
+        9: "All Imperials deal Double Damage",
+        value: 0,
     },
 
-    noble = {
-        three: "Nobles grant 1 random ally +50 Armor and Magic Resist and heal for 25 on hit",
-        six: "Nobles grant all allies +50 Armor and Magic Resist and heal for 25 on hit"
+    Noble = {
+        name: "Noble",
+        3: "Nobles grant 1 random ally +50 Armor and Magic Resist and heal for 25 on hit",
+        4: "Nobles grant 1 random ally +50 Armor and Magic Resist and heal for 25 on hit",
+        5: "Nobles grant 1 random ally +50 Armor and Magic Resist and heal for 25 on hit",
+        6: "Nobles grant all allies +50 Armor and Magic Resist and heal for 25 on hit",
+        7: "Nobles grant all allies +50 Armor and Magic Resist and heal for 25 on hit",
+        8: "Nobles grant all allies +50 Armor and Magic Resist and heal for 25 on hit",
+        9: "Nobles grant all allies +50 Armor and Magic Resist and heal for 25 on hit",
+        value: 0,
     },
 
-    ninja = {
-        one: "Ninja gains +50 Attack Damage & Ability Power",
-        four: "All Ninjas gain +70 Attack Damage & Ability Power"
+    Ninja = {
+        name: "Ninja",
+        1: "Ninja gains +50 Attack Damage & Ability Power",
+        4: "All Ninjas gain +70 Attack Damage & Ability Power",
+        5: "All Ninjas gain +70 Attack Damage & Ability Power",
+        6: "All Ninjas gain +70 Attack Damage & Ability Power",
+        7: "All Ninjas gain +70 Attack Damage & Ability Power",
+        8: "All Ninjas gain +70 Attack Damage & Ability Power",
+        9: "All Ninjas gain +70 Attack Damage & Ability Power",
+        value: 0,
     },
 
-    pirate = {
-        three: "Earn up to 4 additional gold after combat against another player."
+    Pirate = {
+        name: "Pirate",
+        3: "Earn up to 4 additional gold after combat against another player.",
+        4: "Earn up to 4 additional gold after combat against another player.",
+        5: "Earn up to 4 additional gold after combat against another player.",
+        6: "Earn up to 4 additional gold after combat against another player.",
+        7: "Earn up to 4 additional gold after combat against another player.",
+        7: "Earn up to 4 additional gold after combat against another player.",
+        8: "Earn up to 4 additional gold after combat against another player.",
+        9: "Earn up to 4 additional gold after combat against another player.",
+        value: 0,
     },
 
-    phantom = {
-        two: "Curse a random enemy at the start of combat, setting their HP to 100."
+    Phantom = {
+        name: "Phantom",
+        2: "Curse a random enemy at the start of combat, setting their HP to 100.",
+        3: "Curse a random enemy at the start of combat, setting their HP to 100.",
+        4: "Curse a random enemy at the start of combat, setting their HP to 100.",
+        5: "Curse a random enemy at the start of combat, setting their HP to 100.",
+        6: "Curse a random enemy at the start of combat, setting their HP to 100.",
+        7: "Curse a random enemy at the start of combat, setting their HP to 100.",
+        8: "Curse a random enemy at the start of combat, setting their HP to 100.",
+        9: "Curse a random enemy at the start of combat, setting their HP to 100.",
+        value: 0,
     },
 
-    robot = {
-        one: "Robots start combat at full mana"
+    Robot = {
+        name: "Robot",
+        1: "Robots start combat at full mana",
+        2: "Robots start combat at full mana",
+        3: "Robots start combat at full mana",
+        4: "Robots start combat at full mana",
+        5: "Robots start combat at full mana",
+        6: "Robots start combat at full mana",
+        7: "Robots start combat at full mana",
+        8: "Robots start combat at full mana",
+        9: "Robots start combat at full mana",
+        value: 0,
     },
 
-    'void' = {
-        three: "Void units deal True Damage"
+    Voids = {
+        name: "Voids",
+        3: "Void units deal True Damage",
+        4: "Void units deal True Damage",
+        5: "Void units deal True Damage",
+        6: "Void units deal True Damage",
+        7: "Void units deal True Damage",
+        8: "Void units deal True Damage",
+        9: "Void units deal True Damage",
+        value: 0,
     },
 
-    wild = {
-        two: "Attacks from Wild allies only generate stacks of Fury (up to 5). Each stack of Fury grants 12% Attack Speed.",
-        four: "Attacks for all allies generate stacks of Fury (up to 5). Each stack of Fury grants 12% Attack Speed. Their basic attacks can't miss"
+    Wild = {
+        name: "Wild",
+        2: "Attacks from Wild allies only generate stacks of Fury (up to 5). Each stack of Fury grants 12% Attack Speed.",
+        3: "Attacks from Wild allies only generate stacks of Fury (up to 5). Each stack of Fury grants 12% Attack Speed.",
+        4: "Attacks for all allies generate stacks of Fury (up to 5). Each stack of Fury grants 12% Attack Speed. Their basic attacks can't miss",
+        5: "Attacks for all allies generate stacks of Fury (up to 5). Each stack of Fury grants 12% Attack Speed. Their basic attacks can't miss",
+        6: "Attacks for all allies generate stacks of Fury (up to 5). Each stack of Fury grants 12% Attack Speed. Their basic attacks can't miss",
+        7: "Attacks for all allies generate stacks of Fury (up to 5). Each stack of Fury grants 12% Attack Speed. Their basic attacks can't miss",
+        8: "Attacks for all allies generate stacks of Fury (up to 5). Each stack of Fury grants 12% Attack Speed. Their basic attacks can't miss",
+        9: "Attacks for all allies generate stacks of Fury (up to 5). Each stack of Fury grants 12% Attack Speed. Their basic attacks can't miss",
+        value: 0,
     },
 
-    yordle = {
-        three: "Attacks against ally Yordles have a 35% chance to miss",
-        six: "Attacks against ally Yordles have a 60% chance to miss"
+    Yordle = {
+        name: "Yordle",
+        3: "Attacks against ally Yordles have a 35% chance to miss",
+        4: "Attacks against ally Yordles have a 35% chance to miss",
+        5: "Attacks against ally Yordles have a 35% chance to miss",
+        6: "Attacks against ally Yordles have a 60% chance to miss",
+        7: "Attacks against ally Yordles have a 60% chance to miss",
+        8: "Attacks against ally Yordles have a 60% chance to miss",
+        9: "Attacks against ally Yordles have a 60% chance to miss",
+        value: 0,
     }
 ]

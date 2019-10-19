@@ -62,7 +62,7 @@ Graves = {
 
 Kassadin = {
     name: 'Kassadin',
-    origin: 'Void',
+    origin: 'Voids',
     class: 'Sorcerer',
     image: 'kassadin.png',
     classChecker: [],
@@ -72,7 +72,7 @@ Kassadin = {
 
 KhaZix = {
     name: 'KhaZix',
-    origin: 'Void',
+    origin: 'Voids',
     class: 'Assassin',
     image: 'khazix.png',
     classChecker: [],
@@ -212,7 +212,7 @@ Pyke = {
 
 RekSai = {
     name: 'RekSai',
-    origin: 'Void',
+    origin: 'Voids',
     class: 'Brawler',
     image: 'reksai.png',
     classChecker: [],
@@ -422,7 +422,7 @@ Brand = {
 
 ChoGath = {
     name: 'ChoGath',
-    origin: 'Void',
+    origin: 'Voids',
     class: 'Bralwer',
     image: 'chogath.png',
     classChecker: [],

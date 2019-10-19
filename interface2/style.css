@@ -14,8 +14,8 @@ body {
 #teamInterface {
   display: grid;
   border: solid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   background-color: black;
   height: auto;
   width: auto;
@@ -28,22 +28,23 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   background-color: white;
-  height: auto;
-  max-width: 1fr;
+  max-width: 50vw;
+  max-height: 100vh;
+  overflow: scroll;
 }
 
 .champion {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  font-size: 8px;
-  max-height: 130px;
-  width: auto;
+  font-size: 6px;
+  max-height: 75px;
+  max-width: 75px;
 }
 
 .championSource {
-  height: 75px;
-  width: 75px;
+  max-height: 40px;
+  max-width: 40px;
 }
 
 .team {
@@ -57,10 +58,10 @@ body {
 }
 
 #interface {
-  height: auto;
+  max-height: auto;
   width: auto;
   display: grid;
-  grid-template-columns: 3fr 6fr; 
+  grid-template-columns: 3fr 4fr 2fr; 
   grid-template-rows: auto;
 }
 
@@ -68,7 +69,7 @@ body {
   height: auto;
   width: auto;
   display: grid;
-  grid-template-columns: 3fr 6fr;
+  grid-template-columns: 3fr 4fr 2fr;
 }
 
 .origin {
@@ -88,4 +89,20 @@ body {
 
 .na {
   border-color: purple;
+}
+
+#synergy {
+  background-color: black;
+  border: solid;
+  border-color: white;
+}
+
+.synergies {
+  color: white;
+  font-size: 10px;
+}
+
+.teamImage {
+  max-width: 80px;
+  max-height: 80px;
 }

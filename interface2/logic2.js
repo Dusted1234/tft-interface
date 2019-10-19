@@ -7,7 +7,7 @@ function createList() {
       html += `
   <div class="champion" id="${champion.name}">
     <h2>${champion.name}</h2>
-    <button onclick="team.push(${champion.name}), createTeam(), synergyCheck()">
+    <button onclick="team.push(${champion.name}), createTeam(), synergyCheck(), synergyList()">
     <img class="championSource" src="/assets/${champion.image}">
     </button>
     </div>
@@ -28,7 +28,6 @@ function createTeam() {
      <img class ="teamImage" src="/assets/${member.image}">
     </div>
         `
-    console.log(team);
     }
 
     const teamTarget = document.getElementById('teamInterface');
@@ -60,7 +59,6 @@ function synergyCheck () {
       else if (member.origin.includes(champion.origin) == true) {
         champion.originChecker.push(1);
       }
-      console.log([champion.name, champion.originChecker]);
       }
     }
   for (var champion of championList) {
@@ -81,7 +79,6 @@ function synergyCheck () {
       else if (member.class.includes(champion.class) == true) {
         champion.classChecker.push(1);
       }
-      console.log([champion.name, champion.classChecker]);
       }
     }
     for (var champion of championList) {
@@ -112,4 +109,53 @@ function synergyCheck () {
         }
       }
     }
+}
+
+function synergyList () {
+  let originHTML = '';
+  const originsTarget = document.getElementById('origins');
+  originsTarget.innerHTML = '';
+  for (origins of originList) {
+    origins.value = 0;
+  }
+  for (origins of originList) { 
+    for (member of team) {    
+      if (member.origin.includes(origins.name) == true) {
+        origins.value += 1;
+      }
+    }
+  }
+  for (origins of originList) {
+    if (origins.hasOwnProperty(origins.value) == true) {
+      originHTML += `
+      <div class="synergies">
+      <h2>${origins.name}</h2>
+      <body>${origins[origins.value]}</body>
+      </div>
+      `
+      originsTarget.innerHTML = originHTML;
+    }
+  }
+  let classHTML = '';
+  const classesTarget = document.getElementById('classes');
+  classesTarget.innerHTML = ''
+  for (classes of classList) {
+    classes.value = 0;  
+    for (member of team) {    
+      if (member.class.includes(classes.name) == true) {
+        classes.value += 1;
+      }
+    }
+  }
+  for (classes of classList) {
+    if (classes.hasOwnProperty(classes.value) == true) {
+      classHTML += `
+      <div class="synergies">
+      <h2>${classes.name}</h2>
+      <body>${classes[classes.value]}</body>
+      </div>
+      `
+      classesTarget.innerHTML = classHTML;
+    }
+  }
 }
