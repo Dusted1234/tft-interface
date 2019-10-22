@@ -25,11 +25,11 @@ body {
 #championDisplay{
   display: grid;
   border: solid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   background-color: white;
   max-width: 50vw;
-  max-height: 100vh;
+  max-height: 75vh;
   overflow: scroll;
 }
 
@@ -99,7 +99,7 @@ body {
 
 .synergies {
   color: white;
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .teamImage {

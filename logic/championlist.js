@@ -560,4 +560,13 @@ Yasuo = {
     bothChecker: [],
 },
 
+Kaisa = {
+    name: 'Kaisa',
+    origin: "Void",
+    class: ['Ranger', 'Assassin'],
+    image: 'kaisa.png',
+    classChecker: [],
+    originChecker: [],
+    bothChecker: [],
+}
 ]
